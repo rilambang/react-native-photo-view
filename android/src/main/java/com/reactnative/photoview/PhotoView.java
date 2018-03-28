@@ -52,6 +52,9 @@ public class PhotoView extends PhotoDraweeView {
     private int mFadeDurationMs = -1;
     private ControllerListener mControllerListener;
 
+    public float width = 0;
+    public float height = 0;
+
     public PhotoView(Context context) {
         super(context);
     }

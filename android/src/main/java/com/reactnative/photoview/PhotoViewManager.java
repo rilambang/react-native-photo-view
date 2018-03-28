@@ -68,9 +68,19 @@ public class PhotoViewManager extends SimpleViewManager<PhotoView> {
         view.setMaximumScale(maximumZoomScale);
     }
 
+    @ReactProp(name = "windowWidth")
+    public void setWindowWidth(PhotoView view, float windowWidth) {
+        view.width = windowWidth;
+    }
+
+    @ReactProp(name = "windowHeight")
+    public void setWindowHeight(PhotoView view, float windowHeight) {
+        view.width = windowHeight;
+    }
+
     @ReactProp(name = "scale")
     public void setScale(PhotoView view, float scale) {
-        view.setScale(scale, true);
+        view.setScale(scale, view.width / 2, view.height / 2, true);
     }
 
     @ReactProp(name = "androidZoomTransitionDuration")
